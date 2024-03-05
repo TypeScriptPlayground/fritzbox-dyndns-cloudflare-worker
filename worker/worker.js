@@ -1,1 +1,1 @@
-var a={async fetch(e){let{searchParams:s}=new URL(e.url)}};export{a as default};
+function s(r){let e=r.get("token"),o=r.get("zoneId"),t=r.get("records");if(!e)throw new Error('Missing parameter: "token"');if(!o)throw new Error('Missing parameter: "zoneId"');if(!t)throw new Error('Missing parameter: "records"');return{token:e,zoneId:o,records:JSON.parse(t)}}var c={async fetch(r){let e=s(new URL(r.url).searchParams)}};export{c as default};
