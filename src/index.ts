@@ -1,3 +1,4 @@
+import { ListDNSRecordsResponse } from './response/list_dns_records_response.ts';
 import { parseUrlParameters } from './url/parse_url_parameters.ts';
 
 const apiEndpoint = "https://api.cloudflare.com/client/v4/";
@@ -21,8 +22,10 @@ export default {
       'Authorization': `Bearer ${token}`
     }
 
-    records.forEach((record) => {
-      
+    records.forEach(({type, name}) => {
+      fetch(`${dnsRecordsUrl}/?type=${type}&name=${name}`).then(response => response.json()).then((response : ListDNSRecordsResponse) => {
+        
+      })
     })
   }
 }
