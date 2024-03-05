@@ -1,10 +1,7 @@
-import { RecordType } from '../record/record_type.ts';
+import { DNSRecord } from '../record/dns_record.ts';
 
 export interface URLParameters {
   token : string,
   zoneId : string,
-  type : RecordType,
-  ipv4 : string,
-  ipv6 : string,
-  
+  records : DNSRecord[]
 }
