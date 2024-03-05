@@ -15,15 +15,14 @@ const filesConfig : esbuild.BuildOptions = {
   legalComments: args.develope ? 'inline' : 'none',
   color: true,
   minify: !args.develope ?? true,
-  outdir: './dist',
   bundle: true,
   format: 'esm',
   target: 'es2022',
   sourcemap: args.develope ?? false,
   sourcesContent: args.develope ?? false,
-  entryNames: '[dir]/bundle.min',
+  outfile: 'worker/worker.js',
   entryPoints: [
-    './src/**/index.ts'
+    './src/index.ts'
   ],
 }
 
