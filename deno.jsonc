@@ -8,7 +8,8 @@
     "test": "deno test -A --check --reload --doc --allow-none --junit-path=\"./report.xml\""
   },
   "exclude": [
-    "./dist/"
+    "./dist/",
+    "./worker/"
   ],
   "test": {
     "include": [
