@@ -8,8 +8,21 @@ export default {
    * @param request Incoming http request
    */
   async fetch(request : Request) : Promise<void> {
-    const urlParameters = parseUrlParameters(new URL(request.url).searchParams)
+    const urlParameters = parseUrlParameters(new URL(request.url).searchParams);
+    const {
+      token,
+      zoneId,
+      records
+    } = urlParameters;
+  
+    const dnsRecordsUrl = `${apiEndpoint}zones/${zoneId}/dns_records`;
+    const authorizationHeader = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    }
 
-    
+    records.forEach((record) => {
+      
+    })
   }
 }
