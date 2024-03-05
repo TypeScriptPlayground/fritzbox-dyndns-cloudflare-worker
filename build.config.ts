@@ -19,7 +19,6 @@ const filesConfig : esbuild.BuildOptions = {
   bundle: true,
   format: 'esm',
   target: 'es2022',
-  
   sourcemap: args.develope ?? false,
   sourcesContent: args.develope ?? false,
   entryNames: '[dir]/bundle.min',
