@@ -10,6 +10,6 @@ export default {
   async fetch(request : Request) : Promise<void> {
     const urlParameters = parseUrlParameters(new URL(request.url).searchParams)
 
-
+    
   }
 }
