@@ -18,12 +18,13 @@ const filesConfig : esbuild.BuildOptions = {
   outdir: './dist',
   bundle: true,
   format: 'esm',
-  sourcemap: true,
-  sourcesContent: true,
+  target: 'es2022',
+  
+  sourcemap: args.develope ?? false,
+  sourcesContent: args.develope ?? false,
   entryNames: '[dir]/bundle.min',
   entryPoints: [
-    './src/**/index.ts',
-    './src/**/index.scss',
+    './src/**/index.ts'
   ],
 }
 
