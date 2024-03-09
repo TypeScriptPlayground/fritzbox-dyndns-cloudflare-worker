@@ -1,7 +1,10 @@
+import buildUrlWithFilter from './url/build_url_with_filter.ts';
 import { ListDNSRecordsResponse } from './response/list_dns_records_response.ts';
 import { parseUrlParameters } from './url/parse_url_parameters.ts';
+import { endpoints } from './api/endpoints.ts';
+import getAllDnsRecords from './record/get_all_dns_records.ts';
 
-const apiEndpoint = "https://api.cloudflare.com/client/v4/";
+
 
 export default {
   /**
@@ -16,16 +19,20 @@ export default {
       records
     } = urlParameters;
   
-    const dnsRecordsUrl = `${apiEndpoint}zones/${zoneId}/dns_records`;
     const authorizationHeader = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     }
 
+    getAllDnsRecords(
+      `${endpoints.BASE}zones/${zoneId}/dns_records/`,
+      authorizationHeader
+    ).then((response) => {
+      response
+    })
+
     records.forEach(({type, name}) => {
-      fetch(`${dnsRecordsUrl}/?type=${type}&name=${name}`).then(response => response.json()).then((response : ListDNSRecordsResponse) => {
-        
-      })
+      
     })
   }
 }
