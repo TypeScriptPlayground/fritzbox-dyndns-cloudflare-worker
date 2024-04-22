@@ -1,0 +1,44 @@
+name: 'Check Transpiled JavaScript'
+
+on:
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-dist:
+    name: 'Check dist/'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Setup Repository (${{github.event.repository.name}})'
+        uses: actions/checkout@v4
+
+      - name: 'Setup Deno'
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: 'Build worker/ Directory'
+        run: deno task build
+
+      - name: 'Compare Directories'
+        id: 'diff'
+        run: |
+          if [ "$(git diff --ignore-space-at-eol --text worker/ | wc -l)" -gt "0" ]; then
+            echo "Detected uncommitted changes after build. See status below:"
+            git diff --ignore-space-at-eol --text worker/
+            exit 1
+          fi
+
+      - name: 'Upload Artifact'
+        if: ${{ failure() && steps.diff.outcome == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
