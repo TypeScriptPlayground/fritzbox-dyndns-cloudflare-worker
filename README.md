@@ -1,3 +1,5 @@
+[Link to old project (still works fine)](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns). I am currently rewriting this project from vanilla JS to TS. I also want to improve the documentation and functionality.
+
 # Fritz!Box DynDNS Cloudflare Worker
 Update your Cloudflare DNS records from your Fritz!Box.
 
@@ -6,9 +8,7 @@ Update your Cloudflare DNS records from your Fritz!Box.
 [![Check Transpiled JavaScript](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml)
 
 ## Worker File
-The build worker.js file can be found inside of the [`worker/`](./worker) directory.
-
-[Link to old project (still works fine)](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns). I am currently rewriting this project from vanilla JS to TS. I also want to improve the documentation and functionality.
+The build `worker.js` file can be found inside of the [`worker/`](./worker) directory.
 
 ```
 - Record<Type>
