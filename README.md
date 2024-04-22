@@ -1,5 +1,5 @@
-# Template
-Template for TypeScript.
+# Fritz!Box DynDNS Cloudflare
+Update your Cloudflare DNS records from your Fritz!Box.
 
 ```
 - Record<Type>
