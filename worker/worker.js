@@ -1,1 +1,1 @@
-function n(r){let e=r.get("token"),o=r.get("zoneId"),t=r.get("records");if(!e)throw new Error('Missing parameter: "token"');if(!o)throw new Error('Missing parameter: "zoneId"');if(!t)throw new Error('Missing parameter: "records"');return{token:e,zoneId:o,records:JSON.parse(t)}}var a="https://api.cloudflare.com/client/v4/",f={async fetch(r){let e=n(new URL(r.url).searchParams),{token:o,zoneId:t,records:s}=e,c=`${a}zones/${t}/dns_records`,i={"Content-Type":"application/json",Authorization:`Bearer ${o}`};s.forEach(d=>{})}};export{f as default};
+
