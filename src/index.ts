@@ -1,6 +1,5 @@
 import getDnsRecordsFromApi from './api/get_dns_records_from_api.ts';
-import InvalidUrlParametersError from './error/invalid_url_parameters_error.ts';
-import getDnsRecordsFromUrlParameters from './url/get_dns_records_from_url_parameters.ts';
+import fillDefaultUrlParameterValues from './url/fill_default_url_parameter_values.ts';
 
 export default {
   /**
@@ -8,26 +7,13 @@ export default {
    * @param request Incoming http request
    */
   async fetch(request : Request) : Promise<void> {
-    const urlParameters = new URL(request.url).searchParams;
+    const urlParameters = fillDefaultUrlParameterValues(new URL(request.url).searchParams);
 
-    const token = urlParameters.get('token');
-    const zoneId = urlParameters.get('zoneId');
-
-    if (token === null) {
-      throw new InvalidUrlParametersError({cause: 'No "token" was supplied.'})
-    }
-
-    if (zoneId === null) {
-      throw new InvalidUrlParametersError({cause: 'No "zoneId" was supplied.'})
-    }
-
-    const requestRecords = getDnsRecordsFromUrlParameters(urlParameters);
+    const requestRecords = urlParameters.records;
     const currentRecords = getDnsRecordsFromApi({
       apiEndpoint: 'https://api.cloudflare.com/client/v4/',
-      token,
-      zoneId
+      token: urlParameters.token,
+      zoneId: urlParameters.zoneId
     })
-
-
   }
 }
