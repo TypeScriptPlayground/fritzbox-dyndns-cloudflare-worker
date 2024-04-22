@@ -1,6 +1,8 @@
 # Fritz!Box DynDNS Cloudflare
 Update your Cloudflare DNS records from your Fritz!Box.
 
+[![Check Transpiled JavaScript](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml)
+
 [Link to old project, that still works fine](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns)
 
 ```
