@@ -1,6 +1,8 @@
 # Fritz!Box DynDNS Cloudflare
 Update your Cloudflare DNS records from your Fritz!Box.
 
+[Link to old project, that still works fine](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns)
+
 ```
 - Record<Type>
   - type : Type
