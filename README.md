@@ -1,4 +1,4 @@
-# Fritz!Box DynDNS Cloudflare
+# Fritz!Box DynDNS Cloudflare Worker
 Update your Cloudflare DNS records from your Fritz!Box.
 
 [![Run Unit Tests](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/test.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/test.yml)
