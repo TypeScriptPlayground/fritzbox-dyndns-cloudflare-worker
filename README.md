@@ -10,6 +10,8 @@ Update your Cloudflare DNS records from your Fritz!Box.
 ## Why does this project exist?
 Many ISPs often only offer a dynamic IP for the home connection or charge a lot of money for a static IP address. In most cases, a static IP is not required, but if you want to offer a service from your own home via your home connection, there is often no way around a static IP. However, there is an alternative to a static IP, and that is [DynDNS](https://en.wikipedia.org/wiki/Dynamic_DNS). Using a DynDNS you can automatically update a name server in the Domain Name System (DNS). This means that if the IP of your home connection changes, the router can notify the name server of this change.
 
+AVM does already provide a [build-in DynDNS service for the Fritz!Box, called MyFritz](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-3490/1018_Determining-the-MyFRITZ-address-to-directly-access-FRITZ-Box-and-home-network-from-the-internet/), why not use the build-in service instead? Because than I need another.
+
 This project was developed especially for the [Fritz!Box by AVM](https://en.avm.de/products/fritzbox/), but the worker can also be used for other routers that support DynDNS.
 
 ## Worker File
