@@ -1,13 +1,11 @@
-import { RecordType } from './record_type.ts';
+import { DNSRecordType } from './dns_record_type.ts';
 
 /**
  * This interface represents a record.
- * 
- * @template Type The type of the record
  */
-export interface Record<Type extends RecordType> {
+export interface DNSRecord {
   /** Record type. */
-  type : Type,
+  type : DNSRecordType,
   /** 
    * `A` - A valid IPv4 address.\
    * `AAAA` - A valid IPv6 address.\
