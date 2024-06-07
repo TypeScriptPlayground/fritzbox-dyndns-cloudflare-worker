@@ -15,7 +15,7 @@ AVM does already provide a [build-in DynDNS service for the Fritz!Box, called My
 This project was developed especially for the [Fritz!Box by AVM](https://en.avm.de/products/fritzbox/), but the worker can also be used for other routers that support DynDNS.
 
 ## How does the update mechanism work?
-If the IP is changed by the ISP, the Fritz!Box sends a GET request to the DynDNS URL. The Fritz!Box offers various placeholders for the URL which are automatically filled in by the Fritz!Box before sending.
+If the IP is changed by the ISP, the Fritz!Box sends a GET request to the DynDNS URL. The Fritz!Box offers [various placeholders](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/) for the URL which are automatically filled in by the Fritz!Box before sending.
 
 The worker which is behind the URL is executed by the GET request of the Fritz!Box and changes the IP which was given via the URL parameters using the Cloudflare API.
 
