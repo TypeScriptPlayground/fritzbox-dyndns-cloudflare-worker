@@ -1,11 +1,15 @@
 [Link to old project (still works fine)](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns). I am currently rewriting this project from vanilla JS to TS. I also want to improve the documentation and functionality.
 
 # Fritz!Box DynDNS Cloudflare Worker
+
+<a href="https://workers.cloudflare.com/"><img align="right" src="https://gist.githubusercontent.com/Mqxx/1a3f1feb6b55f6ce193dd9e7e66efcaf/raw/c941960d157a32074c5dd7139973a22343ddeb3d/cloudflare_worker_badge.svg" width="400px" alt="Cloudflare Workers logo (horizontal combination mark)"></a>
+
 Update your Cloudflare DNS records from your Fritz!Box.
 
 [![Run Unit Tests](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/test.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/test.yml)
 [![Run Linter](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/lint.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/lint.yml)
 [![Check Transpiled JavaScript](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml/badge.svg)](https://github.com/TypeScriptPlayground/fritzbox-dyndns-cloudflare/actions/workflows/check_dist.yml)
+
 
 ## Why does this project exist?
 Many ISPs often only offer a dynamic IP for the home connection or charge a lot of extra money for a static IP address. In most cases, a static IP is not required, but if you want to offer a service from your own home via your home connection, there is often no way around a static IP. However, there is an alternative to a static IP, and that is [DynDNS](https://en.wikipedia.org/wiki/Dynamic_DNS). Using a DynDNS you can automatically update a name server in the Domain Name System (DNS). This means that if the IP of your home connection changes, the router can notify the name server of this change.
