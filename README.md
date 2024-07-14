@@ -2,7 +2,12 @@
 
 # Fritz!Box DynDNS Cloudflare Worker
 
-<a href="https://workers.cloudflare.com/"><img align="right" src="https://gist.githubusercontent.com/Mqxx/1a3f1feb6b55f6ce193dd9e7e66efcaf/raw/c941960d157a32074c5dd7139973a22343ddeb3d/cloudflare_worker_badge.svg" width="400px" alt="Cloudflare Workers logo (horizontal combination mark)"></a>
+<a href="https://workers.cloudflare.com/">
+<picture>
+<source width="400px" media="(prefers-color-scheme: light)" srcset="https://gist.githubusercontent.com/Mqxx/1a3f1feb6b55f6ce193dd9e7e66efcaf/raw/c9faf3d4f4d5f00c9fb08a5007a3309aeffe5c8b/cloudflare_worker_badge_light.svg">
+<img width="400px" src="https://gist.githubusercontent.com/Mqxx/1a3f1feb6b55f6ce193dd9e7e66efcaf/raw/c9faf3d4f4d5f00c9fb08a5007a3309aeffe5c8b/cloudflare_worker_badge_dark.svg">
+</picture>
+</a>
 
 Update your Cloudflare DNS records from your Fritz!Box.
 
