@@ -28,6 +28,20 @@ If the IP is changed by the ISP, the Fritz!Box sends a GET request to the DynDNS
 
 The worker which is behind the URL is executed by the GET request of the Fritz!Box and changes the IP which was given via the URL parameters using the Cloudflare API.
 
+## Usage
+### Update URL
+Parts of the update URL:
+```
+https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type":"A","content":"000.000.000.000","name":"example.com","proxied":false,"comment":"Updated by Fritz!Box DynDNS","ttl":100}
+        ─┬──── ─┬────── ─┬───────────── ─┬────────── ─┬──────────── ─┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+         │      │        │               │            │              └ The record to create/update
+         │      │        │               │            └ The zone ID from your domain
+         │      │        │               └ The API token
+         │      │        └ Cloudflare base URL
+         │      └ 
+         └
+```
+
 ## Worker File
 The build `worker.js` file can be found inside of the [`worker/`](./worker) directory.
 
