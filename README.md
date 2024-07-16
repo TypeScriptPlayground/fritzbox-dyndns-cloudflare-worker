@@ -37,7 +37,7 @@ https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type
         │      │        │               │            │             └ The record to create/update
         │      │        │               │            └ The zone ID of your domain
         │      │        │               └ The API token
-        │      │        └ Cloudflare base URL
+        │      │        └ The Cloudflare base URL
         │      └ Your Cloudflare username
         └ Your worker instance name
 ```
