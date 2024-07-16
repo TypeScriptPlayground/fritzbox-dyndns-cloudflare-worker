@@ -33,13 +33,13 @@ The worker which is behind the URL is executed by the GET request of the Fritz!B
 Parts of the update URL:
 ```
 https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type":"A","content":"000.000.000.000","name":"example.com","proxied":false,"comment":"Updated by Fritz!Box DynDNS","ttl":100}
-        └┬──── └┬────── └┬───────────── └┬────────── └┬─────────── └┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-         │      │        │               │            │             └ The record to create/update
-         │      │        │               │            └ The zone ID from your domain
-         │      │        │               └ The API token
-         │      │        └ Cloudflare base URL
-         │      └ Your Cloudflare username
-         └ Your worker instance name
+        ├───── ├─────── ├────────────── ├─────────── ├──────────── ├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        │      │        │               │            │             └ The record to create/update
+        │      │        │               │            └ The zone ID from your domain
+        │      │        │               └ The API token
+        │      │        └ Cloudflare base URL
+        │      └ Your Cloudflare username
+        └ Your worker instance name
 ```
 
 ## Worker File
