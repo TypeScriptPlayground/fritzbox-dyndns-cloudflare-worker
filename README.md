@@ -45,15 +45,15 @@ https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type
 ### Placeholders
 Furthermore, there are a few placeholders which are automatically replaced by the Fritz!Box:
 
-|      Parameter       | Description                   |
-|:--------------------:|:------------------------------|
-|     `<username>`     | Username                      |
-| `<pass>`/`<passwd>`  | Password (Token)              |
-|      `<domain>`      | Domain                        |
-|      `<ipaddr>`      | IPv4 address of the Fritz!Box |
-|     `<ip6addr>`      | IPv6 address of the Fritz!Box |
-|   `<ip6lanprefix>`   | IPv6 prefix for home network  |
-|    `<dualstack>`     | Dual-stack                    |
+|      Parameter       | Description                       |
+|:--------------------:|:----------------------------------|
+|     `<username>`     | Username                          |
+| `<pass>`/`<passwd>`  | Password (Token)                  |
+|      `<domain>`      | Domain                            |
+|      `<ipaddr>`      | New IPv4 address of the Fritz!Box |
+|     `<ip6addr>`      | New IPv6 address of the Fritz!Box |
+|   `<ip6lanprefix>`   | IPv6 prefix for home network      |
+|    `<dualstack>`     | Dual-stack                        |
 
 For more information please reference to [this knowledge base](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/) from AVM on "2 Setting up dynamic DNS".
 
