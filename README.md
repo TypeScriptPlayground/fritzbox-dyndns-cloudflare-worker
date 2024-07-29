@@ -54,7 +54,7 @@ Furthermore, there are a few placeholders which are automatically replaced by th
 |     `<ip6addr>`      | New IPv6 address of the Fritz!Box |
 |   `<ip6lanprefix>`   | IPv6 prefix for home network      |
 |    `<dualstack>`     | Dual-stack                        |
-|  `<b64>`...`</b64>`  | Base64 encoded Data               |
+| `<b64>` ... `</b64>` | Base64 encoded Data               |
 
 For more information please reference to [this knowledge base](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/) from AVM on "2 Setting up dynamic DNS".
 
