@@ -34,7 +34,7 @@ Parts of the update URL:
 ```
 https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type":"A","content":"000.000.000.000","name":"example.com","proxied":false,"comment":"Updated by Fritz!Box DynDNS","ttl":100}
         ├────┘ ├──────┘ ├─────────────┘ ├──────────┘ ├───────────┘ ├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-        │      │        │               │            │             └ The record to create/update
+        │      │        │               │            │             └ The record to create/update (JSON format)
         │      │        │               │            └ The zone ID of your domain
         │      │        │               └ The API token
         │      │        └ The Cloudflare base URL
