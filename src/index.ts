@@ -1,4 +1,4 @@
-import {parseUpdateRequestURL} from './url/mod.ts'
+import {parseUpdateRequestURL} from './request/url/mod.ts'
 
 export default {
   /**
