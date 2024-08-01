@@ -1,4 +1,4 @@
-import { DNSRecord } from '../../record/dns_record.ts';
+import {DNSRecord} from '../../../record/dns_record.ts';
 import MissingURLParameterKeyError from '../error/missing_url_parameter_key_error.ts';
 import MissingURLParameterValueError from '../error/missing_url_parameter_value_error.ts';
 

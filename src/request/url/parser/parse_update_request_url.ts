@@ -1,4 +1,4 @@
-import { UpdateRequestURLParameters } from '../interface/update_request_url_parameters.ts';
+import {RequestURLParameters} from '../interface/update_request_url_parameters.ts';
 import getRecords from './get_records.ts';
 import getToken from './get_token.ts';
 import getZoneId from './get_zone_id.ts';
@@ -9,7 +9,7 @@ import getZoneId from './get_zone_id.ts';
  * @param url The request URL
  * @returns The URL parameters
  */
-export default function parseUpdateRequestURL(url : URL) : UpdateRequestURLParameters {
+export default function parseRequestURL(url : URL) : RequestURLParameters {
   
   return {
     token: getToken(url),

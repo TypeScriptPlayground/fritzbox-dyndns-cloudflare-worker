@@ -1,14 +1,14 @@
-import {parseUpdateRequestURL} from './request/url/mod.ts'
+import {parseRequestURL} from './request/url/mod.ts'
 
 export default {
   /**
    * [Reference](https://developers.cloudflare.com/workers/runtime-apis/handlers/fetch/)
    * 
-   * @param updateRequest Incoming http request
+   * @param request Incoming http request
    */
-  async fetch(updateRequest : Request) : Promise<void> {
-    const updateRequestUrl = new URL(updateRequest.url)
-    const updateRequestParameters = parseUpdateRequestURL(updateRequestUrl)
+  async fetch(request : Request) : Promise<void> {
+    const requestUrl = new URL(request.url)
+    const requestParameters = parseRequestURL(requestUrl)
     
   }
 }
