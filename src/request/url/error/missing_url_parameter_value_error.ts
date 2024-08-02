@@ -1,4 +1,4 @@
-import CustomError from '../../error/custom_error.ts'
+import CustomError from '../../../error/custom_error.ts'
 
 /**
  * This class represents a missing URL parameters error. This error is thrown if there is a missing URL parameter.

@@ -8,7 +8,7 @@ export default {
    */
   async fetch(request : Request) : Promise<void> {
     const requestUrl = new URL(request.url)
-    const requestParameters = parseRequestURL(requestUrl)
+    const requestUrlParameters = parseRequestURL(requestUrl)
     
   }
 }
