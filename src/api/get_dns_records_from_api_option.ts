@@ -1,7 +1,7 @@
 /**
  * This interface represents options for the API fetch.
  */
-export interface GetDNSRecordsOption {
+export interface GetDNSRecordsFromApiOption {
   /** API URL endpoint. */
   apiEndpoint : string,
   /** Token to access the API. */
