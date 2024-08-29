@@ -56,7 +56,7 @@ Furthermore, there are a few placeholders which are automatically replaced by th
 |    `<dualstack>`     | Dual-stack                        |
 | `<b64>` ... `</b64>` | Base64 encoded Data               |
 
-More information can be found in [this knowledge base](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/) from AVM on the topic "2 Setting up dynamic DNS".
+More information can be found in [this knowledge base from AVM on the topic "2 Setting up dynamic DNS"](https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/).
 
 ## Worker File
 The build `worker.js` file can be found inside of the [`worker/`](./worker) directory.
