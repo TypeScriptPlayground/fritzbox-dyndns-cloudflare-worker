@@ -1,7 +1,7 @@
 import APIRequestError from '../error/api_request_error.ts';
 import FetchRequestError from '../error/fetch_request_error.ts';
 import { DNSRecord } from '../record/dns_record.ts';
-import dnsRecordTypes from '../record/dns_record_type.ts';
+import supportedDnsRecordTypes from '../record/dns_record_type.ts';
 import { GetDNSRecordsFromApiOption } from './get_dns_records_from_api_option.ts';
 
 /**
@@ -12,7 +12,7 @@ import { GetDNSRecordsFromApiOption } from './get_dns_records_from_api_option.ts
  */
 export default function getDnsRecordsFromApi(options: GetDNSRecordsFromApiOption) : Promise<DNSRecord[]> {
   return fetch(
-    `${options.apiEndpoint}zones/${options.zoneId}/dns_records?type=${dnsRecordTypes.join(',')}`,
+    `${options.apiEndpoint}zones/${options.zoneId}/dns_records?type=${supportedDnsRecordTypes.join(',')}`,
     {
       method: 'GET',
       headers: {
