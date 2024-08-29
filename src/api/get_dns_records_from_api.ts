@@ -1,4 +1,4 @@
-import APIRequestError from '../error/api_request_error.ts';
+import ApiRequestError from '../error/api_request_error.ts';
 import FetchRequestError from '../error/fetch_request_error.ts';
 import { DNSRecord } from '../record/dns_record.ts';
 import supportedDnsRecordTypes from '../record/dns_record_type.ts';
@@ -31,6 +31,6 @@ export default function getDnsRecordsFromApi(options: GetDNSRecordsFromApiOption
       if (responseJson.success) {
         return responseJson.result
       }
-      throw new APIRequestError({cause: responseJson.errors})
+      throw new ApiRequestError({cause: responseJson.errors})
     });
 }
