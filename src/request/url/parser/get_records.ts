@@ -1,4 +1,4 @@
-import {DNSRecord} from '../../../record/dns_record.ts';
+import {DnsRecord} from '../../../record/dns_record.ts';
 import MissingURLParameterKeyError from '../error/missing_url_parameter_key_error.ts';
 import MissingURLParameterValueError from '../error/missing_url_parameter_value_error.ts';
 
@@ -12,11 +12,11 @@ import MissingURLParameterValueError from '../error/missing_url_parameter_value_
  * @throws MissingURLParameterValueError If value is an empty array
  * @returns The list of records
  */
-export default function getRecords(url : URL) : DNSRecord[] {
+export default function getRecords(url : URL) : DnsRecord[] {
   const key = 'records'
   const recordsExist = url.searchParams.has(key);
   const records = url.searchParams.getAll(key);
-  const recordsList : DNSRecord[] = []
+  const recordsList : DnsRecord[] = []
 
   if (recordsExist) {
     throw new MissingURLParameterKeyError(key)
@@ -27,7 +27,7 @@ export default function getRecords(url : URL) : DNSRecord[] {
   }
 
   records.forEach((recordValue, recordIndex) => {
-    const record = JSON.parse(recordValue) as Partial<DNSRecord>
+    const record = JSON.parse(recordValue) as Partial<DnsRecord>
     
     if (!record.type) {
       throw new MissingURLParameterValueError(`${key}[${recordIndex}].type`)

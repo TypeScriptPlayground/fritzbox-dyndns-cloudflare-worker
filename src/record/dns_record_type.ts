@@ -11,4 +11,4 @@ export default supportedDnsRecordTypes;
 /**
  * This type represents all allowed records to use.
  */
-export type DNSRecordType = ValuesFromArray<typeof supportedDnsRecordTypes>;
+export type DnsRecordType = ValuesFromArray<typeof supportedDnsRecordTypes>;

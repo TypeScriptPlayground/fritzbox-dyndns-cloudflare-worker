@@ -1,7 +1,7 @@
-import { DNSRecord } from '../record/dns_record.ts';
+import { DnsRecord } from '../record/dns_record.ts';
 import timestamp from './generator/timestamp.ts';
 
-export default function recordUpdated(record : DNSRecord) : void {
+export default function recordUpdated(record : DnsRecord) : void {
   console.group(`[${timestamp()}] Record Updated`)
   console.info(`Type: \t${record.type}`)
   console.info(`Content: \t${record.content}`)

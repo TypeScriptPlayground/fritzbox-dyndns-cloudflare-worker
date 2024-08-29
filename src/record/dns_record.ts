@@ -1,11 +1,11 @@
-import { DNSRecordType } from './dns_record_type.ts';
+import { DnsRecordType } from './dns_record_type.ts';
 
 /**
  * This interface represents a record.
  */
-export interface DNSRecord {
+export interface DnsRecord {
   /** Record type. */
-  type : DNSRecordType,
+  type : DnsRecordType,
   /** 
    * `A` - A valid IPv4 address.\
    * `AAAA` - A valid IPv6 address.\

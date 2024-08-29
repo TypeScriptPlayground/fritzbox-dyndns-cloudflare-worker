@@ -1,4 +1,4 @@
-import {DNSRecord} from '../../../record/dns_record.ts';
+import {DnsRecord} from '../../../record/dns_record.ts';
 
 /**
  * This interface represents all URL parameters from the request.
@@ -9,5 +9,5 @@ export interface RequestURLParameters {
   /** Zone ID to get records from. */
   zoneId : string
   /** List of records to update */
-  records : DNSRecord[]
+  records : DnsRecord[]
 }
