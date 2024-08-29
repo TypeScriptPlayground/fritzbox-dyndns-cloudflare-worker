@@ -61,6 +61,22 @@ More information can be found in [this knowledge base from AVM on the topic "2 S
 ## Worker File
 The build `worker.js` file can be found inside of the [`worker/`](./worker) directory.
 
+### Record Properties
+The following properties can be specified for each record to create/update.
+
+[record-comments]: https://developers.cloudflare.com/dns/manage-dns-records/reference/record-attributes/#record-comments
+[proxied-dns-records]: https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records
+[ttl]: https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/
+
+| Parameter | Valid Value                                   | Description                                                                                                                                                 |
+|:---------:|:----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  `type`   | `A`/`AAAA`/`CNAME`                            | Type of the record.                                                                                                                                         |
+| `content` | *string*                                      | String value representing the content for the record.<br>Ex. IP for `A` record: `XXX.XXX.XXX.XXX`                                                           |
+|  `name`   | *string*                                      | Your domain.<br>Ex. `example.com`                                                                                                                           |
+| `proxied` | `true`/`false`                                | If the record should be proxied by Cloudflare.<br>You can find more information in the [Cloudflare documantation about "Proxy status"][proxied-dns-records] |
+| `comment` | *string [(character limit)][record-comments]* | A comment for this record.                                                                                                                                  |
+|   `ttl`   | *number*/`auto`                               | [Time to live (TTL)][ttl].                                                                                                                                  |
+
 ```
 - Record<Type>
   - type : Type
