@@ -19,7 +19,7 @@ export default function createDnsRecord(
     }
   )
     .then((response) => {
-      if (!response.ok) {
+      if (response.ok) {
         return response.json();
       }
       throw new FetchRequestError({cause: response.statusText});
