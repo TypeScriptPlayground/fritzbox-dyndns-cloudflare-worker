@@ -7,7 +7,5 @@ export interface ApiRequestOptions {
   /** Token to access the API. */
   token : string,
   /** Zone ID to get records from. */
-  zoneId : string,
-  /** Record ID to update a record. */
-  recordId? : string
+  zoneId : string
 }
