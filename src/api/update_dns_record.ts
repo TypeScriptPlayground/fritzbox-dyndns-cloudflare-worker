@@ -4,11 +4,12 @@ import { DnsRecord } from '../record/dns_record.ts';
 import { ApiRequestOptions } from './api_request_options.ts';
 
 export default function updateDnsRecord(
+  recordId : string,
   record : DnsRecord,
   options : ApiRequestOptions
 ) : void {
   fetch(
-    `${options.apiEndpoint}zones/${options.zoneId}/dns_records/${options.recordId}`,
+    `${options.apiEndpoint}zones/${options.zoneId}/dns_records/${recordId}`,
     {
       method: 'PATCH',
       headers: {
