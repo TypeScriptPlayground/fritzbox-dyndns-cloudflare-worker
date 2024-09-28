@@ -1,4 +1,6 @@
-[Link to old project (still works fine)](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns). I am currently rewriting this project from vanilla JS to TS. I also want to improve the documentation and functionality.
+>  [!IMPORTANT]
+> This Project is currently work in progress and not finished *yet*!  
+> [Link to old project (still works fine)](https://github.com/JavaScriptPlayground/cloudflare-worker-fritzbox-dyndns). I am currently rewriting this project from vanilla JS to TS. I also want to improve the documentation and functionality.
 
 # Fritz!Box DynDNS Cloudflare Worker
 
