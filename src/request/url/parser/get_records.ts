@@ -28,7 +28,7 @@ export default function getRecords(url : URL) : DnsRecord[] {
 
   records.forEach((recordValue, recordIndex) => {
     const record = JSON.parse(recordValue) as Partial<DnsRecord>
-    
+
     if (!record.type) {
       throw new MissingURLParameterValueError(`${key}[${recordIndex}].type`)
     }
