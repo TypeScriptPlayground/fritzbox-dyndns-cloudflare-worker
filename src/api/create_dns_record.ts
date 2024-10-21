@@ -7,13 +7,17 @@ export default function createDnsRecord(
   record : DnsRecord,
   options : ApiRequestOptions
 ) : void {
+  const {token, zoneId} = options;
+
+  const apiEndpoint = options.apiEndpoint ?? 'https://api.cloudflare.com/client/v4/'
+
   fetch(
-    `${options.apiEndpoint}zones/${options.zoneId}/dns_records`,
+    `${apiEndpoint}zones/${zoneId}/dns_records`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${options.token}`
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify(record)
     }
