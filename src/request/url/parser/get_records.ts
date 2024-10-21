@@ -22,7 +22,7 @@ export default function getRecords(url : URL) : DnsRecord[] {
     throw new MissingURLParameterKeyError(key)
   }
 
-  if (records.length) {
+  if (records.length === 0) {
     throw new MissingURLParameterValueError(key)
   }
 
