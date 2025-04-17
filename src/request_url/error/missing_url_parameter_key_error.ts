@@ -1,16 +1,16 @@
-import CustomError from '../../../error/custom_error.ts'
+import CustomError from '../../error/custom_error.ts'
 
 /**
  * This class represents a missing URL parameters error. This error is thrown if there is a missing URL parameter.
  */
-export default class MissingURLParameterValueError extends CustomError {
+export default class MissingURLParameterKeyError extends CustomError {
   parameter : string;
   /**
    * @param parameter The missing parameter
    */
   constructor(parameter : string) {
     super(
-      `Uncaught MissingURLParameterValueError: Missing value for parameter "${parameter}"`,
+      `Uncaught MissingURLParameterKeyError: Missing key for parameter "${parameter}"`,
     );
 
     this.parameter = parameter

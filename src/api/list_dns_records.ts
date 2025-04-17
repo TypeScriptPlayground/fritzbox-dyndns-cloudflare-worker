@@ -1,6 +1,6 @@
 import ApiRequestError from '../error/api_request_error.ts';
 import FetchRequestError from '../error/fetch_request_error.ts';
-import { DnsRecord } from '../record/dns_record.ts';
+import { DnsRecordList } from '../record/dns_record_list.ts';
 import supportedDnsRecordTypes from '../record/dns_record_type.ts';
 import { ApiRequestOptions } from './api_request_options.ts';
 
@@ -10,7 +10,7 @@ import { ApiRequestOptions } from './api_request_options.ts';
  * @param options Options for the API fetch
  * @returns List of all DNS records found.
  */
-export default function listDnsRecordsFromApi(options : ApiRequestOptions) : Promise<DnsRecord[]> {
+export default function listDnsRecordsFromApi(options : ApiRequestOptions) : Promise<DnsRecordList[]> {
   return fetch(
     `${options.apiEndpoint}zones/${options.zoneId}/dns_records?type=${supportedDnsRecordTypes.join(',')}`,
     {

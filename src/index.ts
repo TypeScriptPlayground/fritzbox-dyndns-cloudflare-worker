@@ -1,6 +1,5 @@
-import createDnsRecord from './api/create_dns_record.ts';
-import listDnsRecords from './api/list_dns_records.ts';
-import {parseRequestURL} from './request/url/index.ts'
+import requestUrl from './request_url/index.ts';
+import api from './api/index.ts';
 
 export default {
   /**
@@ -9,16 +8,24 @@ export default {
    * @param request Incoming http request
    */
   async fetch(request : Request) : Promise<void> {
-    const requestUrl = new URL(request.url)
-    const {token, zoneId, records} = parseRequestURL(requestUrl)
+    const {
+      token,
+      zoneId,
+      records: requestedRecords
+    } = requestUrl.parse(request.url);
     
-    const existingRecords = await listDnsRecords({token, zoneId})
+    const existingRecords = await api.listDnsRecords({token, zoneId})
 
-    existingRecords.forEach((record) => {
-      
-    })
-    records.forEach((record) => {
-      createDnsRecord(record, {token, zoneId})
+    requestedRecords.forEach((requestedRecord) => {
+      existingRecords.filter(
+        (existingRecord) => existingRecord.name === requestedRecord.name
+      ).forEach((selectedRecord) => api.updateDnsRecord(
+        selectedRecord.id,
+        requestedRecord,
+        {token, zoneId}
+      ))
+
+      api.createDnsRecord(requestedRecord, {token, zoneId})
     })
   }
 }
