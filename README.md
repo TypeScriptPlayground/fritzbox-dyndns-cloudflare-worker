@@ -49,7 +49,7 @@ https://worker.username.cloudflare.dev/?token=xyz123&zoneId=abc123&record={"type
 ```
 
 ### Placeholders
-Furthermore, there are a few placeholders which are automatically replaced by the Fritz!Box:
+Furthermore, there are a few [placeholders](https://en.fritz.com/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/#:~:text=in%20the%20table%3A-,Entry,-Placeholder%20in%20the) which are automatically replaced by the Fritz!Box:
 
 |      Parameter       | Description                       |
 |:--------------------:|:----------------------------------|
