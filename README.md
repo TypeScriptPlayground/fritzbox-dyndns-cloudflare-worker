@@ -31,6 +31,10 @@ If the IP is changed by the ISP, the Fritz!Box sends a GET request to the DynDNS
 The worker which is behind the URL is executed by the GET request of the Fritz!Box and changes the IP which was given via the URL parameters using the Cloudflare API.
 
 ## Usage
+Open your router interface (ex. http://fritz.box) and follow the instructions on ["Setting up dynamic DNS"](https://en.fritz.com/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/#:~:text=2%20Setting%20up%20dynamic%20DNS).
+
+> If you are using a different router follow their instructions on how to setup the DynDNS.
+
 ### Update URL
 Parts of the update URL:
 ```
