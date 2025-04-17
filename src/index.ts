@@ -1,6 +1,6 @@
 import createDnsRecord from './api/create_dns_record.ts';
 import listDnsRecords from './api/list_dns_records.ts';
-import {parseRequestURL} from './request/url/mod.ts'
+import {parseRequestURL} from './request/url/index.ts'
 
 export default {
   /**
