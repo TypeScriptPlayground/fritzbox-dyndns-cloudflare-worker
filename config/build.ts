@@ -5,24 +5,24 @@ import { parseArgs } from 'https://deno.land/std@0.211.0/cli/parse_args.ts';
 
 const args = parseArgs<{
   watch: boolean | undefined,
-  develope: boolean | undefined,
+  develop: boolean | undefined,
   logLevel: esbuild.LogLevel
 }>(Deno.args);
 
 const filesConfig : esbuild.BuildOptions = {
   allowOverwrite: true,
   logLevel: args.logLevel ?? 'info',
-  legalComments: args.develope ? 'inline' : 'none',
+  legalComments: args.develop ? 'inline' : 'none',
   color: true,
-  minify: !args.develope ?? true,
+  minify: args.develop === true ? false : true,
   bundle: true,
   format: 'esm',
   target: 'es2022',
-  sourcemap: args.develope ?? false,
-  sourcesContent: args.develope ?? false,
+  sourcemap: args.develop ?? false,
+  sourcesContent: args.develop ?? false,
   outfile: 'worker/worker.js',
   entryPoints: [
-    './src/index.ts'
+    './src/worker.ts'
   ],
 }
 
