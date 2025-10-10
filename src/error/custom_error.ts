@@ -6,7 +6,7 @@
  * 
  * @returns The custom error
  */
-export default class CustomError extends Error {
+export class CustomError extends Error {
   /**
    * @param message The custom error message
    * @param options The custom error options

@@ -1,8 +1,7 @@
-import ApiRequestError from '../error/api_request_error.ts';
-import FetchRequestError from '../error/fetch_request_error.ts';
-import { DnsRecordList } from '../record/dns_record_list.ts';
-import supportedDnsRecordTypes from '../record/dns_record_type.ts';
-import { ApiRequestOptions } from './api_request_options.ts';
+import * as error from '../error/index.ts';
+import type { DnsRecordList } from '../record/dns_record_list.ts';
+import * as record from '../record/index.ts';
+import type { ApiRequestOptions } from './api_request_options.ts';
 
 /**
  * This function gets all DNS records, filtered by the DNS record types.
@@ -10,9 +9,9 @@ import { ApiRequestOptions } from './api_request_options.ts';
  * @param options Options for the API fetch
  * @returns List of all DNS records found.
  */
-export default function listDnsRecordsFromApi(options : ApiRequestOptions) : Promise<DnsRecordList[]> {
+export function listDnsRecords(options : ApiRequestOptions) : Promise<DnsRecordList[]> {
   return fetch(
-    `${options.apiEndpoint}zones/${options.zoneId}/dns_records?type=${supportedDnsRecordTypes.join(',')}`,
+    `${options.apiEndpoint}zones/${options.zoneId}/dns_records?type=${record.dnsRecordTypes.join(',')}`,
     {
       method: 'GET',
       headers: {
@@ -25,12 +24,12 @@ export default function listDnsRecordsFromApi(options : ApiRequestOptions) : Pro
       if (response.ok) {
         return response.json();
       }
-      throw new FetchRequestError({cause: response.statusText});
+      throw new error.FetchRequestError({cause: response.statusText});
     })
     .then((responseJson) => {
       if (responseJson.success) {
         return responseJson.result
       }
-      throw new ApiRequestError({cause: responseJson.errors})
+      throw new error.ApiRequestError({cause: responseJson.errors})
     });
 }

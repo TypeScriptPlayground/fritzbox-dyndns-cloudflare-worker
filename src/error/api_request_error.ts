@@ -1,9 +1,9 @@
-import CustomError from './custom_error.ts'
+import { CustomError } from './custom_error.ts'
 
 /**
  * This class represents an api request error. This error is thrown if there is an error during the api request.
  */
-export default class ApiRequestError extends CustomError {
+export class ApiRequestError extends CustomError {
   /**
    * @param error The custom error options
    */

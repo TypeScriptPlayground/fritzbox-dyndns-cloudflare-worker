@@ -1,9 +1,14 @@
-import ApiRequestError from '../error/api_request_error.ts';
-import FetchRequestError from '../error/fetch_request_error.ts';
-import { DnsRecord } from '../record/dns_record.ts';
-import { ApiRequestOptions } from './api_request_options.ts';
+import * as error from '../error/index.ts';
+import type { DnsRecord } from '../record/dns_record.ts';
+import type { ApiRequestOptions } from './api_request_options.ts';
 
-export default function createDnsRecord(
+
+/**
+ * This function creates a DNS record.
+ * 
+ * @param options Options for the API fetch
+ */
+export function createDnsRecord(
   record : DnsRecord,
   options : ApiRequestOptions
 ) : void {
@@ -26,11 +31,11 @@ export default function createDnsRecord(
       if (response.ok) {
         return response.json();
       }
-      throw new FetchRequestError({cause: response.statusText});
+      throw new error.FetchRequestError({cause: response.statusText});
     })
     .then((responseJson) => {
       if (!responseJson.success) {
-        throw new ApiRequestError({cause: responseJson.errors})
+        throw new error.ApiRequestError({cause: responseJson.errors})
       }
     });
 }

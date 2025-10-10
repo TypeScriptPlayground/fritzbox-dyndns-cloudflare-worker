@@ -1,4 +1,4 @@
-import { DnsRecord } from './dns_record.ts';
+import type { DnsRecord } from './dns_record.ts';
 
 export interface DnsRecordList extends DnsRecord {
   

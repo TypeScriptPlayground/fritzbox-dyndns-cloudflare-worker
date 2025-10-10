@@ -1,4 +1,4 @@
-import { DnsRecordType } from './dns_record_type.ts';
+import type { DnsRecordType } from './dns_record_types.ts';
 
 /**
  * This interface represents a record.

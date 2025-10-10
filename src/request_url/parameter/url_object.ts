@@ -1,4 +1,5 @@
-import { DnsRecord } from '../../record/dns_record.ts';
+import type { DnsRecord } from '../../record/dns_record.ts';
+
 
 /**
  * This interface represents the URL parameters from the request.
