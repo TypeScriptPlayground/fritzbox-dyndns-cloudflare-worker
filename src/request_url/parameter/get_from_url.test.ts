@@ -1,4 +1,3 @@
-/// <reference lib="deno.ns" />
 import { assertEquals, assertThrows } from '@std/assert'
 import { getFromUrl } from './index.ts';
 import {MissingURLParameterKeyError} from '../error/index.ts';
