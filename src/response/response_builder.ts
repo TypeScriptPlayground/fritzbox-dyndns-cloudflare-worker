@@ -1,4 +1,4 @@
-export default function responseBuilder(
+export function responseBuilder(
   success : boolean,
   result : unknown,
   errors : {type : string, message : string}[]

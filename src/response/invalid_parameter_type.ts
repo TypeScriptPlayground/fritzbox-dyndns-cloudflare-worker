@@ -1,6 +1,6 @@
-import responseBuilder from './response_builder.ts';
+import { responseBuilder } from './response_builder.ts';
 
-export default function InvalidParameterType(
+export function invalidParameterType(
   parameter : string,
   type : string
 ) : Response {
